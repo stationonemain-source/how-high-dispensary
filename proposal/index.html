@@ -1,0 +1,280 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="robots" content="noindex, nofollow">
+<title>Proposal for How High Dispensary · Station.Solutions</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bungee&family=Libre+Franklin:wght@400;500;600;700;800&display=swap">
+<style>
+/* Layout: the proposal wears How High's storefront look (navy, sign panel, Bungee) so it reads as theirs; Station signs the bottom. */
+:root {
+  --night:#0b1729; --navy:#12233d; --navy-2:#1a3052; --line:rgba(160,190,235,.16);
+  --blue:#4a86d8; --blue-hi:#7fb0f0; --leaf:#4fb75a; --leaf-hi:#7ddc82; --warn:#f0b04a; --bad:#f07a6a;
+  --sign:#f1eff5; --ink:#0b1729; --text:#e8edf5; --text-2:#a9b6c9; --muted:#7d8ba1;
+  --f-sign:'Bungee', 'Arial Black', Impact, sans-serif; --f-body:'Libre Franklin', 'Helvetica Neue', Arial, sans-serif;
+  color-scheme:dark;
+}
+* { box-sizing:border-box }
+[hidden] { display:none !important }
+html { scroll-behavior:smooth }
+@media (prefers-reduced-motion: reduce) { html { scroll-behavior:auto } }
+body { margin:0; background:var(--night); color:var(--text); font:16px/1.6 var(--f-body); -webkit-font-smoothing:antialiased }
+img { max-width:100%; height:auto; display:block }
+a { color:inherit }
+h1, h2, h3 { margin:0; font-weight:400; text-wrap:balance }
+p { margin:0 }
+:focus-visible { outline:3px solid var(--leaf-hi); outline-offset:3px }
+.wrap { max-width:1080px; margin:0 auto; padding-inline:20px }
+.label { font:700 12px/1 var(--f-body); letter-spacing:.16em; text-transform:uppercase; color:var(--leaf-hi) }
+.btn { display:inline-flex; align-items:center; gap:8px; font:700 15px/1 var(--f-body); text-decoration:none; padding:14px 20px; border-radius:6px; border:2px solid transparent }
+.btn-leaf { background:var(--leaf); color:var(--ink) }
+.btn-ghost { border-color:var(--line) }
+.sign { background:var(--sign); border-radius:6px; padding:6px 9px; display:inline-block; box-shadow:0 0 0 2px var(--navy-2), 0 0 0 3px var(--line) }
+.sign img { width:150px }
+
+header.top { border-bottom:1px solid var(--line) }
+header.top .wrap { display:flex; flex-wrap:wrap; justify-content:space-between; align-items:center; gap:14px; padding-block:14px }
+header.top span.by { font-size:13px; color:var(--text-2) }
+
+.cover .wrap { padding-block:clamp(44px,7vw,84px) 40px; display:flex; flex-direction:column; gap:22px }
+.cover h1 { font:400 clamp(34px,5.6vw,68px)/1 var(--f-sign) }
+.cover h1 em { font-style:normal; color:var(--bad) }
+.cover p.lede { font-size:clamp(17px,1.8vw,20px); color:var(--text-2); max-width:62ch }
+.meta { display:grid; grid-template-columns:repeat(4,minmax(0,1fr)); gap:1px; background:var(--line); border:1px solid var(--line); border-radius:10px; overflow:hidden }
+.meta div { background:var(--navy); padding:14px 16px; display:flex; flex-direction:column; gap:4px; font-size:14.5px }
+.meta span { font:700 11px/1 var(--f-body); letter-spacing:.14em; text-transform:uppercase; color:var(--muted) }
+.toc { display:flex; flex-wrap:wrap; gap:8px 18px; font-size:14px; font-weight:600 }
+.toc a { color:var(--text-2); text-decoration:none }
+.toc a:hover { color:var(--text) }
+
+section { padding-block:clamp(44px,6vw,72px); border-top:1px solid var(--line) }
+.sec-head { display:flex; flex-direction:column; gap:10px; margin-bottom:28px; max-width:760px }
+.sec-head h2 { font:400 clamp(28px,3.8vw,44px)/1.02 var(--f-sign) }
+.sec-head p { color:var(--text-2); font-size:17px }
+
+.short { display:grid; grid-template-columns:1.3fr .7fr; gap:28px; align-items:start }
+.short > * { min-width:0 }
+.short p { color:var(--text-2); font-size:17px }
+.short p + p { margin-top:14px }
+.short p b { color:var(--text) }
+.price { background:var(--navy); border:1px solid var(--line); border-radius:10px; padding:22px; display:flex; flex-direction:column; gap:12px }
+.price .big { font:400 54px/1 var(--f-sign); color:var(--leaf-hi) }
+.price .sub { font-size:13.5px; color:var(--text-2) }
+.price ul { margin:0; padding:0; list-style:none; display:flex; flex-direction:column; gap:8px; font-size:14.5px; border-top:1px dashed var(--line); padding-top:12px }
+.price li { padding-left:20px; position:relative }
+.price li::before { content:""; position:absolute; left:2px; top:.55em; width:9px; height:5px; border-left:2px solid var(--leaf-hi); border-bottom:2px solid var(--leaf-hi); transform:rotate(-45deg) }
+
+.frame { border:1px solid var(--line); border-radius:12px; overflow:hidden; background:var(--navy) }
+.frame-bar { display:flex; justify-content:space-between; align-items:center; gap:10px; padding:10px 14px; border-bottom:1px solid var(--line); font-size:13px; color:var(--text-2) }
+.frame iframe { display:block; width:100%; height:min(78vh,760px); border:0; background:var(--night) }
+.built { margin-top:22px; display:grid; grid-template-columns:repeat(3,1fr); gap:16px }
+.built div { background:var(--navy); border:1px solid var(--line); border-radius:10px; padding:18px; display:flex; flex-direction:column; gap:6px }
+.built h3 { font:700 17px/1.3 var(--f-body) }
+.built p { font-size:14.5px; color:var(--text-2) }
+
+.audit { display:grid; grid-template-columns:.8fr 1.2fr; gap:28px; align-items:start }
+.audit > * { min-width:0 }
+.score { background:var(--navy); border:1px solid var(--line); border-radius:10px; padding:22px; display:flex; flex-direction:column; gap:12px }
+.score .n { font:400 64px/1 var(--f-sign) }
+.score .n small { font:700 16px var(--f-body); color:var(--text-2); margin-left:6px }
+.mb { display:grid; grid-template-columns:124px 1fr 30px; align-items:center; gap:10px; font-size:13.5px; color:var(--text-2) }
+.mb i { height:7px; background:rgba(160,190,235,.1); border-radius:999px; overflow:hidden; display:block }
+.mb b { display:block; height:100%; background:var(--blue-hi); border-radius:999px }
+.mb em { font-style:normal; font-weight:700; text-align:right; color:var(--text) }
+.score p { font-size:13px; color:var(--muted) }
+.finds { display:flex; flex-direction:column; gap:12px }
+.find { background:var(--navy); border:1px solid var(--line); border-left:4px solid var(--bad); border-radius:10px; padding:16px 18px; display:flex; flex-direction:column; gap:6px }
+.find.good { border-left-color:var(--leaf) }
+.find .k { font:700 11px/1 var(--f-body); letter-spacing:.14em; text-transform:uppercase; color:var(--bad) }
+.find.good .k { color:var(--leaf-hi) }
+.find h3 { font:700 17.5px/1.35 var(--f-body) }
+.find p { font-size:15px; color:var(--text-2) }
+.find code { font-size:13px; background:rgba(160,190,235,.1); padding:1px 5px; border-radius:4px }
+
+.tbl { overflow-x:auto; border:1px solid var(--line); border-radius:10px }
+table { border-collapse:collapse; width:100%; font-size:15px; font-variant-numeric:tabular-nums }
+th { font:700 11px/1 var(--f-body); letter-spacing:.14em; text-transform:uppercase; color:var(--muted); text-align:left; padding:12px 14px; border-bottom:1px solid var(--line); white-space:nowrap }
+td { padding:12px 14px; border-bottom:1px solid var(--line); vertical-align:top }
+tr:last-child td { border-bottom:0 }
+tr.you td { color:var(--leaf-hi); font-weight:700 }
+td.num { white-space:nowrap }
+
+.plan { display:grid; grid-template-columns:repeat(2,1fr); gap:16px }
+.plan div { background:var(--navy); border:1px solid var(--line); border-radius:10px; padding:20px; display:flex; flex-direction:column; gap:8px }
+.plan h3 { font:400 20px/1.1 var(--f-sign); color:var(--blue-hi) }
+.plan p { font-size:15px; color:var(--text-2) }
+
+.inv td:last-child { text-align:right; white-space:nowrap; font-weight:700 }
+.inv tr.total td { font-size:17px; color:var(--leaf-hi) }
+.inv td small { display:block; color:var(--muted); font-weight:400; font-size:13px }
+
+.steps { display:grid; grid-template-columns:repeat(3,1fr); gap:16px; counter-reset:s }
+.steps div { counter-increment:s; border-top:3px solid var(--blue); padding-top:16px; display:flex; flex-direction:column; gap:6px }
+.steps div::before { content:counter(s); font:400 30px/1 var(--f-sign); color:var(--blue-hi) }
+.steps h3 { font:700 17px/1.3 var(--f-body) }
+.steps p { font-size:15px; color:var(--text-2) }
+
+.need { margin:0; padding:0; list-style:none; display:grid; grid-template-columns:1fr 1fr; gap:10px 28px }
+.need li { padding:12px 0 12px 30px; border-bottom:1px solid var(--line); position:relative; font-size:15.5px }
+.need li::before { content:""; position:absolute; left:0; top:15px; width:16px; height:16px; border:2px solid var(--blue-hi); border-radius:4px }
+.need li small { display:block; color:var(--text-2); font-size:13.5px }
+.rules { margin-top:24px; font-size:14px; color:var(--text-2); background:var(--navy); border:1px solid var(--line); border-radius:10px; padding:16px 18px }
+
+.close { background:var(--sign); color:var(--ink); border-top:0 }
+.close .wrap { display:flex; flex-direction:column; gap:18px; align-items:flex-start }
+.close h2 { font:400 clamp(30px,4.4vw,52px)/1 var(--f-sign); color:#1f5fb4 }
+.close p { font-size:17px; max-width:60ch }
+.close .mail { font:700 20px var(--f-body); color:#2e6e37; user-select:all }
+.close .btn-leaf { background:#2e8b3a; color:#fff }
+
+footer { padding-block:28px 40px; font-size:12.5px; color:var(--muted) }
+footer .wrap { display:flex; flex-wrap:wrap; justify-content:space-between; gap:10px }
+footer a { color:var(--text-2) }
+
+@media (max-width:860px) {
+  .short, .audit { grid-template-columns:1fr }
+  .built, .steps { grid-template-columns:1fr }
+  .plan, .need { grid-template-columns:1fr }
+  .meta { grid-template-columns:1fr 1fr }
+  .frame iframe { height:640px }
+}
+</style>
+</head>
+<body>
+<header class="top"><div class="wrap"><span class="sign"><img src="../img/logo.jpg" alt="How High Dispensary" width="1060" height="370"></span><span class="by">Proposal · prepared by Station.Solutions</span></div></header>
+
+<main>
+  <div class="cover"><div class="wrap">
+    <span class="label">How High Dispensary · Norman &amp; Moore</span>
+    <h1>You&rsquo;re paying for a website that says <em>&ldquo;Website Expired.&rdquo;</em></h1>
+    <p class="lede">This is everything in one place: the new site we have already built for How High, what we found online for both stores, and exactly what it takes to put it live on howhighdispensary.com.</p>
+    <div class="meta">
+      <div><span>Prepared for</span>How High Dispensary</div>
+      <div><span>Prepared by</span>Station.Solutions</div>
+      <div><span>Date</span>29 September 2026</div>
+      <div><span>Valid until</span>29 October 2026</div>
+    </div>
+    <nav class="toc" aria-label="Sections"><a href="#short">Summary</a><a href="#site">See the site</a><a href="#found">What we found</a><a href="#rivals">Who you&rsquo;re up against</a><a href="#plan">The plan</a><a href="#price">Investment</a><a href="#when">Timeline</a><a href="#need">What we need</a></nav>
+  </div></div>
+
+  <section id="short" aria-labelledby="short-h"><div class="wrap short">
+    <div>
+      <div class="sec-head" style="margin-bottom:16px"><span class="label">The short version</span><h2 id="short-h">Great stores. No front door online.</h2></div>
+      <p>Patients love How High. The Norman store has <b>263 Google reviews at 4.8 stars</b>, more than all but six of the 39 dispensaries in Norman. Online, though, that shows up as nothing. The domain you renew every year points to a Squarespace page that says &ldquo;Website Expired&rdquo;, and the Norman Google listing has no website at all.</p>
+      <p>We have already built the replacement. It&rsquo;s live below as a private preview, hidden from Google. What&rsquo;s left is to point howhighdispensary.com at it, fix both Google listings, and add your photos and details.</p>
+    </div>
+    <aside class="price" aria-label="Launch price">
+      <span class="label">To launch</span>
+      <span class="big">$1,500</span>
+      <span class="sub">one time · hosting &amp; care quoted monthly for your business</span>
+      <ul><li>The new site on howhighdispensary.com</li><li>Both stores: hours, live open/closed, directions, call</li><li>Patient gate and first-visit guide</li><li>Both Google listings cleaned up</li></ul>
+    </aside>
+  </div></section>
+
+  <section id="site" aria-labelledby="site-h"><div class="wrap">
+    <div class="sec-head"><span class="label">Already built · private preview</span><h2 id="site-h">See the new site</h2><p>Scroll it right here, or open it full screen. It&rsquo;s hidden from Google until launch.</p></div>
+    <div class="frame">
+      <div class="frame-bar"><span>howhighdispensary.com · preview</span><a href="../" target="_blank" rel="noopener">Open full screen &#8599;</a></div>
+      <iframe src="../" title="Preview of the new How High Dispensary website" loading="lazy"></iframe>
+    </div>
+    <div class="built">
+      <div><h3>Tells people you&rsquo;re open</h3><p>A live line at the top reads &ldquo;Norman is open now, until 10 PM tonight&rdquo;, on Norman&rsquo;s clock, and today&rsquo;s row lights up in both hours tables.</p></div>
+      <div><h3>Both stores, one site</h3><p>Norman and Moore side by side, each with hours, a tap-to-call button and directions. On a phone, a bar at the bottom keeps Directions, Call and Hours one thumb away.</p></div>
+      <div><h3>Built for the rules</h3><p>A patient gate at the door, your license number in the footer, no health claims, and a first-visit guide that tells new patients what to bring.</p></div>
+    </div>
+  </div></section>
+
+  <section id="found" aria-labelledby="found-h"><div class="wrap">
+    <div class="sec-head"><span class="label">Audit of both stores online · 29 September 2026</span><h2 id="found-h">What we found</h2><p>Every point was checked on the live web and in Google&rsquo;s own business data. The score measures how easily a patient can find, trust and reach you online. It says nothing about the stores themselves, which your reviews rate highly.</p></div>
+    <div class="audit">
+      <div class="score">
+        <span class="label">Norman store</span>
+        <span class="n">49<small>/ 100</small></span>
+        <div class="mb"><span>Google listing</span><i><b style="width:65%"></b></i><em>65</em></div>
+        <div class="mb"><span>Reviews</span><i><b style="width:99%"></b></i><em>99</em></div>
+        <div class="mb"><span>Website</span><i><b style="width:0%"></b></i><em>0</em></div>
+        <div class="mb"><span>Local search</span><i><b style="width:38%"></b></i><em>38</em></div>
+        <div class="mb"><span>Tools</span><i><b style="width:0%"></b></i><em>0</em></div>
+        <p>Weights: listing 25%, reviews 25%, website 20%, local search 20%, tools 10%. Every score is computed by fixed rules from what we recorded.</p>
+      </div>
+      <div class="finds">
+        <div class="find good"><span class="k">Good news</span><h3>Your reviews are among the best in Norman.</h3><p>263 reviews at 4.8 for Norman and 169 at 4.8 for Moore, with new ones as recently as late August. Patients name your budtenders and the service. That reputation is the hard part, and you already have it.</p></div>
+        <div class="find"><span class="k">Website</span><h3>The domain works; the site behind it expired.</h3><p>howhighdispensary.com is registered at GoDaddy and renewed through <b>16 June 2028</b>. It still points to a Squarespace account that has expired, so every visitor sees &ldquo;Website Expired&rdquo;. The Internet Archive shows it working in 2022, and it has been down since at least October 2023. When it did work, the page title was &ldquo;Wilson Medical&rdquo;, left over from a template, and it listed only Moore.</p></div>
+        <div class="find"><span class="k">Google</span><h3>Norman&rsquo;s listing has no website; Moore&rsquo;s is filed as a &ldquo;Wellness Center&rdquo;.</h3><p>Anyone who finds Norman on Google Maps has nowhere to click through. Moore sends people to Instagram, which shows nothing to anyone who isn&rsquo;t logged in.</p></div>
+        <div class="find"><span class="k">Menu</span><h3>No menu for Norman anywhere online.</h3><p>We found none on Leafly, Weedmaps, Dutchie or Jane. Leafly lists Moore only, with no menu, and a Weedmaps listing that existed has been taken down. Patients who shop by menu choose someone else.</p></div>
+        <div class="find"><span class="k">Search</span><h3>Open until 10&ndash;11 PM, but missing from &ldquo;open late&rdquo;.</h3><p>For &ldquo;dispensary open late Norman OK&rdquo; Google shows High Society, King Kanna and Buddies, not How High. You rank well near OU (#2), on the west side (#3) and in 73069 (#4), but only #9 to #12 for plain &ldquo;dispensary Norman&rdquo;.</p></div>
+      </div>
+    </div>
+  </div></section>
+
+  <section id="rivals" aria-labelledby="rivals-h"><div class="wrap">
+    <div class="sec-head"><span class="label">Norman, on Google</span><h2 id="rivals-h">Who you&rsquo;re up against</h2><p>Of the ten most-reviewed dispensaries in Norman, How High and Hi Roots are the only two without a website.</p></div>
+    <div class="tbl" tabindex="0" role="region" aria-label="Competitor comparison"><table>
+      <thead><tr><th>Dispensary</th><th>Google reviews</th><th>Online</th></tr></thead>
+      <tbody>
+        <tr><td>Mango Cannabis (Main St)</td><td class="num">3,038 &middot; 4.9</td><td>Own site, live Dutchie menu, email list</td></tr>
+        <tr><td>Pharmer&rsquo;s Market on Lindsey</td><td class="num">602 &middot; 4.8</td><td>Own site titled &ldquo;Best Dispensary in Norman OK&rdquo;, menus on Leafly and Weedmaps</td></tr>
+        <tr><td>High Society (two Norman stores)</td><td class="num">494 + 293</td><td>Own site, email list</td></tr>
+        <tr class="you"><td>How High (Norman)</td><td class="num">263 &middot; 4.8</td><td>Expired site, no menu, no link on Google</td></tr>
+      </tbody>
+    </table></div>
+  </div></section>
+
+  <section id="plan" aria-labelledby="plan-h"><div class="wrap">
+    <div class="sec-head"><span class="label">What the $1,500 covers</span><h2 id="plan-h">The plan</h2></div>
+    <div class="plan">
+      <div><h3>1. Launch the site</h3><p>The site you see above, finished with your photos and details, live on howhighdispensary.com. You keep the domain; we just point it at the new site.</p></div>
+      <div><h3>2. Fix both Google listings</h3><p>Add the website to Norman, change Moore from &ldquo;Wellness Center&rdquo; to a dispensary category, check hours on both, and add current photos, so the late hours and the site show up where patients look.</p></div>
+      <div><h3>3. Make it findable</h3><p>Page titles, descriptions and store details written for &ldquo;dispensary Norman&rdquo;, &ldquo;dispensary Moore&rdquo; and &ldquo;open late&rdquo;, with each store&rsquo;s address, hours and phone marked up so Google can read them.</p></div>
+      <div><h3>4. Check it on every phone</h3><p>Tested on iPhone and Android sizes and on desktop, with the patient gate, tap-to-call and directions all working before we switch it on.</p></div>
+    </div>
+  </div></section>
+
+  <section id="price" aria-labelledby="price-h"><div class="wrap">
+    <div class="sec-head"><span class="label">Investment</span><h2 id="price-h">One price to launch</h2></div>
+    <div class="tbl inv" tabindex="0" role="region" aria-label="Pricing"><table>
+      <thead><tr><th>Item</th><th>Price</th></tr></thead>
+      <tbody>
+        <tr class="total"><td>Website launch<small>Site for both stores, domain switch-over, both Google listings, search setup, testing</small></td><td>$1,500 one time</td></tr>
+        <tr><td>Hosting &amp; care<small>Keeping it online, secure and up to date, with changes as you need them</small></td><td>Quoted monthly</td></tr>
+        <tr><td>Live menu (optional)<small>Your menu on the site, fed from the system your register already uses (Dutchie, Leafly, Weedmaps or your point of sale)</small></td><td>Quoted</td></tr>
+        <tr><td>Patient email list (optional)<small>Sign-ups at the counter and on the site, and a simple monthly email to patients</small></td><td>Quoted</td></tr>
+      </tbody>
+    </table></div>
+  </div></section>
+
+  <section id="when" aria-labelledby="when-h"><div class="wrap">
+    <div class="sec-head"><span class="label">Timeline</span><h2 id="when-h">Live in about two weeks</h2></div>
+    <div class="steps">
+      <div><h3>Week 1: your details</h3><p>You send the items below. We finish the pages, swap in your photos and set up the Google listings.</p></div>
+      <div><h3>Week 2: review</h3><p>You check the site on your own phone. We make your changes.</p></div>
+      <div><h3>Launch</h3><p>We point howhighdispensary.com at the new site, remove the Google hide flag, and confirm both listings link to it.</p></div>
+    </div>
+  </div></section>
+
+  <section id="need" aria-labelledby="need-h"><div class="wrap">
+    <div class="sec-head"><span class="label">From you</span><h2 id="need-h">What we need</h2></div>
+    <ul class="need">
+      <li>Access to the domain at GoDaddy<small>Or have whoever manages it make one DNS change with us</small></li>
+      <li>Manager access to both Google listings<small>Norman and Moore, so we can add the site and fix the category</small></li>
+      <li>Norman&rsquo;s OMMA license number<small>For the site footer beside Moore&rsquo;s</small></li>
+      <li>A yes on the words<small>The mission and &ldquo;peace, love, unity and respect&rdquo; come from your old site; tell us if anything has changed, including charity events</small></li>
+      <li>Photos of both stores<small>Phone photos are fine. Today&rsquo;s preview uses product photos from your 2020 site</small></li>
+      <li>Your menu system, if you want the live menu<small>Which system runs your register and online menu</small></li>
+    </ul>
+    <p class="rules"><b style="color:var(--text)">Rules we build to.</b> The site is for licensed Oklahoma patients and caregivers, so a patient gate stays at the door, license numbers go in the footer, and the site makes no health claims. Before adding any deals or discount messages, we check the current OMMA rules with you, since the state has been changing its advertising rules this year.</p>
+  </div></section>
+
+  <section class="close" aria-labelledby="close-h"><div class="wrap">
+    <h2 id="close-h">Ready when you are.</h2>
+    <p>Say yes and we start this week. Questions about anything here, big or small, go to the same place.</p>
+    <span class="mail">main@station.solutions</span>
+    <a class="btn btn-leaf" href="mailto:main@station.solutions?subject=How%20High%20Dispensary%20website">Email Station</a>
+  </div></section>
+</main>
+
+<footer><div class="wrap"><span>Prepared for How High Dispensary, 29 Sep 2026. Google figures as recorded that day.</span><span>Designed by <a href="https://station.solutions/" target="_blank" rel="noopener">Station.Solutions</a></span></div></footer>
+</body>
+</html>
