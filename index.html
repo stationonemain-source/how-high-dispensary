@@ -1,0 +1,451 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="robots" content="noindex, nofollow">
+<title>How High Dispensary | Norman &amp; Moore, Oklahoma</title>
+<meta name="description" content="How High Dispensary: medical marijuana dispensary at 2118 W Lindsey St, Norman, and 3537 N Shields Blvd, Moore. Open daily, late on weekends.">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bungee&family=Libre+Franklin:wght@400;500;600;700;800&display=swap">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@graph":[
+ {"@type":"Store","name":"How High Dispensary #2","telephone":"+1-405-217-2330","address":{"@type":"PostalAddress","streetAddress":"2118 W Lindsey St","addressLocality":"Norman","addressRegion":"OK","postalCode":"73069","addressCountry":"US"},
+  "geo":{"@type":"GeoCoordinates","latitude":35.203527,"longitude":-97.4739027},"paymentAccepted":"Cash, Debit card",
+  "openingHoursSpecification":[{"@type":"OpeningHoursSpecification","dayOfWeek":["Monday","Tuesday","Wednesday","Thursday"],"opens":"10:00","closes":"22:00"},{"@type":"OpeningHoursSpecification","dayOfWeek":["Friday","Saturday"],"opens":"10:00","closes":"23:00"},{"@type":"OpeningHoursSpecification","dayOfWeek":"Sunday","opens":"11:00","closes":"20:00"}]},
+ {"@type":"Store","name":"How High Dispensary","telephone":"+1-405-735-7677","address":{"@type":"PostalAddress","streetAddress":"3537 N Shields Blvd, Suite B","addressLocality":"Moore","addressRegion":"OK","postalCode":"73160","addressCountry":"US"},
+  "geo":{"@type":"GeoCoordinates","latitude":35.37029,"longitude":-97.5039166},"paymentAccepted":"Cash, Debit card",
+  "openingHoursSpecification":[{"@type":"OpeningHoursSpecification","dayOfWeek":["Monday","Tuesday","Wednesday","Thursday"],"opens":"10:00","closes":"23:00"},{"@type":"OpeningHoursSpecification","dayOfWeek":["Friday","Saturday"],"opens":"10:00","closes":"00:00"},{"@type":"OpeningHoursSpecification","dayOfWeek":"Sunday","opens":"11:00","closes":"20:00"}]},
+ {"@type":"FAQPage","mainEntity":[
+  {"@type":"Question","name":"What do I need to bring?","acceptedAnswer":{"@type":"Answer","text":"Your Oklahoma medical marijuana patient or caregiver license and a photo ID."}},
+  {"@type":"Question","name":"Do you take cards?","acceptedAnswer":{"@type":"Answer","text":"Yes. Both stores take debit cards as well as cash."}},
+  {"@type":"Question","name":"How late are you open?","acceptedAnswer":{"@type":"Answer","text":"Norman is open until 10 PM Monday to Thursday and 11 PM Friday and Saturday. Moore is open until 11 PM Monday to Thursday and midnight Friday and Saturday. Both open at 11 AM and close at 8 PM on Sunday."}}]}
+]}
+</script>
+<style>
+/* Layout: dark storefront. A sign panel up top, contour-line hero about elevation, two store cards, shelves, the motto, patients, FAQ. */
+:root {
+  --night:#0b1729; --navy:#12233d; --navy-2:#1a3052; --line:rgba(160,190,235,.16);
+  --blue:#4a86d8; --blue-hi:#7fb0f0; --leaf:#4fb75a; --leaf-hi:#7ddc82;
+  --sign:#f1eff5; --ink:#0b1729; --text:#e8edf5; --text-2:#a9b6c9; --muted:#7d8ba1;
+  --f-sign:'Bungee', 'Arial Black', Impact, sans-serif; --f-body:'Libre Franklin', 'Helvetica Neue', Arial, sans-serif;
+  color-scheme:dark;
+}
+* { box-sizing:border-box }
+html { scroll-behavior:smooth }
+@media (prefers-reduced-motion: reduce) { html { scroll-behavior:auto } *, *::before, *::after { animation:none !important; transition:none !important } }
+body { margin:0; background:var(--night); color:var(--text); font:16px/1.6 var(--f-body); -webkit-font-smoothing:antialiased }
+img { max-width:100%; height:auto; display:block }
+[hidden] { display:none !important }
+a { color:inherit }
+h1, h2, h3 { margin:0; font-weight:400; text-wrap:balance }
+p { margin:0 }
+.wrap { max-width:1180px; margin:0 auto; padding-inline:20px }
+.label { font:700 12px/1 var(--f-body); letter-spacing:.16em; text-transform:uppercase; color:var(--leaf-hi) }
+.btn { display:inline-flex; align-items:center; gap:8px; font:700 15px/1 var(--f-body); text-decoration:none; padding:14px 20px; border-radius:6px; border:2px solid transparent; cursor:pointer }
+.btn-leaf { background:var(--leaf); color:var(--ink) }
+.btn-leaf:hover { background:var(--leaf-hi) }
+.btn-ghost { border-color:var(--line); color:var(--text) }
+.btn-ghost:hover { border-color:var(--blue-hi) }
+:focus-visible { outline:3px solid var(--leaf-hi); outline-offset:3px }
+
+/* bar */
+.bar { position:sticky; top:env(safe-area-inset-top, 0px); z-index:20; background:rgba(11,23,41,.92); backdrop-filter:blur(8px); border-bottom:1px solid var(--line) }
+.bar .wrap { display:flex; align-items:center; gap:18px; padding-block:10px }
+.sign { background:var(--sign); border-radius:6px; padding:5px 8px; box-shadow:0 0 0 2px var(--navy-2), 0 0 0 3px var(--line) }
+.sign img { width:132px; height:auto }
+.bar nav { display:flex; gap:22px; margin-left:auto; font-weight:600; font-size:14.5px }
+.bar nav a { text-decoration:none; color:var(--text-2) }
+.bar nav a:hover { color:var(--text) }
+.bar .btn { padding:10px 14px; font-size:14px }
+
+/* hero */
+.hero { position:relative; overflow:hidden; border-bottom:1px solid var(--line) }
+#topo { position:absolute; inset:0; width:100%; height:100%; display:block }
+.hero .wrap { position:relative; display:grid; grid-template-columns:1.25fr .75fr; gap:40px; align-items:end; padding-block:clamp(56px,9vw,120px) clamp(44px,6vw,80px) }
+.hero-copy { display:flex; flex-direction:column; gap:22px; min-width:0 }
+.hero h1 { font:400 clamp(44px,8.4vw,112px)/.92 var(--f-sign); letter-spacing:-.01em }
+.hero h1 .q { color:var(--blue-hi); display:block }
+.hero h1 .ft { color:var(--leaf-hi); display:block }
+.hero p.lede { font-size:clamp(17px,1.6vw,20px); color:var(--text-2); max-width:34ch }
+.hero p.lede b { color:var(--text); font-weight:600 }
+.cta { display:flex; flex-wrap:wrap; gap:12px }
+.status { display:inline-flex; align-items:center; gap:10px; font-weight:600; font-size:15px; padding:8px 14px; border:1px solid var(--line); border-radius:999px; background:rgba(18,35,61,.7); align-self:flex-start }
+.status i { width:9px; height:9px; border-radius:50%; background:var(--muted) }
+.status.open i { background:var(--leaf-hi); box-shadow:0 0 0 4px rgba(125,220,130,.18) }
+.altimeter { background:rgba(18,35,61,.82); border:1px solid var(--line); border-radius:10px; padding:20px 22px; display:flex; flex-direction:column; gap:14px; min-width:0 }
+.altimeter h2 { font:700 12px/1 var(--f-body); letter-spacing:.16em; text-transform:uppercase; color:var(--text-2) }
+.alt-row { display:grid; grid-template-columns:1fr auto; align-items:baseline; gap:8px; padding-top:12px; border-top:1px dashed var(--line) }
+.alt-row b { font:400 30px/1 var(--f-sign); color:var(--text) }
+.alt-row b small { font:700 13px var(--f-body); color:var(--text-2); margin-left:4px }
+.alt-row span { font-size:14px; color:var(--text-2) }
+.alt-note { font-size:12.5px; color:var(--muted) }
+
+/* sections */
+section { padding-block:clamp(56px,8vw,96px) }
+.sec-head { display:flex; flex-direction:column; gap:12px; margin-bottom:34px; max-width:720px }
+.sec-head h2 { font:400 clamp(32px,4.6vw,54px)/1 var(--f-sign) }
+.sec-head p { color:var(--text-2); font-size:17px }
+
+/* stores */
+.stores { display:grid; grid-template-columns:1fr 1fr; gap:20px }
+.store { background:var(--navy); border:1px solid var(--line); border-radius:10px; padding:26px; display:flex; flex-direction:column; gap:18px; min-width:0 }
+.store-top { display:flex; justify-content:space-between; gap:14px; align-items:flex-start }
+.store h3 { font:400 30px/1 var(--f-sign) }
+.store .addr { color:var(--text-2); margin-top:8px }
+.elev { text-align:right; flex:none; font-size:12px; color:var(--muted); line-height:1.3 }
+.elev b { display:block; font:400 20px/1 var(--f-sign); color:var(--blue-hi) }
+.hours { width:100%; border-collapse:collapse; font-size:15px; font-variant-numeric:tabular-nums }
+.hours td { padding:7px 0; border-bottom:1px solid var(--line) }
+.hours td:last-child { text-align:right; color:var(--text-2) }
+.hours tr.today td { color:var(--leaf-hi); font-weight:700 }
+.hours tr.today td:last-child { color:var(--leaf-hi) }
+.chips { display:flex; flex-wrap:wrap; gap:8px; font-size:13px }
+.chips span { border:1px solid var(--line); border-radius:999px; padding:4px 10px; color:var(--text-2) }
+.store .cta .btn { flex:1 1 auto; justify-content:center }
+.store-tag { font:700 11px/1 var(--f-body); letter-spacing:.14em; text-transform:uppercase; color:var(--ink); background:var(--leaf); padding:5px 8px; border-radius:4px; align-self:flex-start }
+.store-tag.b { background:var(--blue-hi) }
+
+/* shelves */
+.shelves { display:grid; grid-template-columns:repeat(4,1fr); gap:16px }
+.shelf { background:var(--navy); border:1px solid var(--line); border-radius:10px; overflow:hidden; display:flex; flex-direction:column; min-width:0 }
+.shelf img { aspect-ratio:4/3; object-fit:cover; width:100%; height:auto }
+.shelf .ph { aspect-ratio:4/3; display:grid; place-items:center; background:
+  repeating-linear-gradient(135deg, var(--navy-2) 0 14px, var(--navy) 14px 28px) }
+.shelf .ph span { font:400 44px/1 var(--f-sign); color:var(--blue-hi) }
+.shelf div.t { padding:16px 18px 20px; display:flex; flex-direction:column; gap:6px }
+.shelf h3 { font:400 22px/1.05 var(--f-sign) }
+.shelf p { font-size:14.5px; color:var(--text-2) }
+.stock-note { margin-top:22px; display:flex; flex-wrap:wrap; gap:12px 24px; align-items:center; color:var(--text-2); font-size:15px }
+
+/* motto */
+.motto { background:var(--sign); color:var(--ink) }
+.motto .wrap { display:grid; grid-template-columns:1.1fr .9fr; gap:48px; align-items:center }
+.motto h2 { font:400 clamp(40px,6.6vw,92px)/.95 var(--f-sign) }
+.motto h2 span:nth-child(1) { color:#1f5fb4 }
+.motto h2 span:nth-child(2) { color:#2e8b3a }
+.motto h2 span:nth-child(3) { color:#1f5fb4 }
+.motto h2 span:nth-child(4) { color:#2e8b3a }
+.motto h2 span { display:block }
+.motto .label { color:#2e6e37 }
+.motto-copy { display:flex; flex-direction:column; gap:16px; font-size:17.5px; line-height:1.65 }
+.motto-copy .sig { font-weight:700 }
+
+/* patients */
+.steps { display:grid; grid-template-columns:repeat(3,1fr); gap:16px; counter-reset:s }
+.step { counter-increment:s; border-top:3px solid var(--blue); padding-top:18px; display:flex; flex-direction:column; gap:8px }
+.step::before { content:counter(s); font:400 34px/1 var(--f-sign); color:var(--blue-hi) }
+.step h3 { font:700 19px/1.3 var(--f-body) }
+.step p { color:var(--text-2); font-size:15.5px }
+.card-note { margin-top:28px; background:var(--navy); border:1px solid var(--line); border-radius:10px; padding:20px 22px; display:flex; flex-wrap:wrap; justify-content:space-between; gap:14px; align-items:center }
+.card-note p { color:var(--text-2); max-width:60ch }
+
+/* reviews + faq */
+.split { display:grid; grid-template-columns:.9fr 1.1fr; gap:48px }
+.split > * { min-width:0 }
+.rev { display:flex; flex-direction:column; gap:16px }
+.rev a.rv { display:flex; justify-content:space-between; align-items:center; gap:12px; text-decoration:none; background:var(--navy); border:1px solid var(--line); border-radius:10px; padding:18px 20px; font-weight:600 }
+.rev a.rv:hover { border-color:var(--blue-hi) }
+.rev a.rv span { color:var(--text-2); font-weight:500; font-size:14px }
+details { border-bottom:1px solid var(--line) }
+details summary { cursor:pointer; list-style:none; padding:18px 0; font-weight:700; font-size:17px; display:flex; justify-content:space-between; gap:12px }
+details summary::-webkit-details-marker { display:none }
+details summary::after { content:"+"; font:400 22px/1 var(--f-sign); color:var(--leaf-hi) }
+details[open] summary::after { content:"\2013" }
+details p { padding-bottom:18px; color:var(--text-2) }
+
+/* footer */
+footer { border-top:1px solid var(--line); padding-block:48px 110px; font-size:14px; color:var(--text-2) }
+footer .wrap { display:flex; flex-direction:column; gap:26px }
+.foot-top { display:flex; flex-wrap:wrap; gap:28px 48px; align-items:flex-start }
+.foot-top .sign img { width:170px }
+.foot-top div.col { display:flex; flex-direction:column; gap:4px }
+.foot-top b { color:var(--text) }
+.legal { font-size:12.5px; color:var(--muted); display:flex; flex-direction:column; gap:6px; max-width:80ch }
+.foot-base { display:flex; flex-wrap:wrap; justify-content:space-between; gap:10px; font-size:12.5px; color:var(--muted); border-top:1px solid var(--line); padding-top:16px }
+.foot-base a { color:var(--text-2) }
+
+/* phone bar */
+.dock { display:none }
+
+/* gate */
+.gate { position:fixed; inset:0; z-index:50; background:rgba(6,12,22,.94); display:grid; place-items:center; padding:20px }
+.gate-card { background:var(--navy); border:1px solid var(--line); border-radius:12px; padding:28px; max-width:440px; width:100%; display:flex; flex-direction:column; gap:18px; text-align:center }
+.gate-card .sign { align-self:center }
+.gate-card .sign img { width:200px }
+.gate-card h2 { font:400 26px/1.1 var(--f-sign) }
+.gate-card p { color:var(--text-2); font-size:15px }
+.gate-card .cta { justify-content:center }
+.gate-no { color:var(--leaf-hi); font-weight:600 }
+
+@media (max-width:900px) {
+  .hero .wrap, .motto .wrap, .split { grid-template-columns:1fr }
+  .stores { grid-template-columns:1fr }
+  .shelves { grid-template-columns:1fr 1fr }
+  .steps { grid-template-columns:1fr }
+  .bar nav { display:none }
+  .bar .btn { margin-left:auto }
+}
+@media (max-width:560px) {
+  .shelves { grid-template-columns:1fr }
+  .bar .btn { display:none }
+  .sign img { width:112px }
+  .dock { display:grid; grid-template-columns:repeat(3,1fr); position:fixed; left:0; right:0; bottom:0; z-index:30; background:var(--navy); border-top:1px solid var(--line); padding-bottom:env(safe-area-inset-bottom, 0px) }
+  .dock a { text-decoration:none; text-align:center; padding:12px 4px; font-weight:700; font-size:13.5px; color:var(--text) }
+  .dock a + a { border-left:1px solid var(--line) }
+  .dock a:first-child { color:var(--leaf-hi) }
+  .store { padding:20px }
+}
+</style>
+</head>
+<body>
+
+<div class="gate" id="gate" role="dialog" aria-modal="true" aria-labelledby="gate-h">
+  <div class="gate-card">
+    <div class="sign"><img src="img/logo.jpg" alt="How High Dispensary" width="1060" height="370"></div>
+    <h2 id="gate-h">Patients only</h2>
+    <p>This site is for Oklahoma medical marijuana patients and caregivers. Are you 18 or older, with a valid patient or caregiver license?</p>
+    <div class="cta"><button class="btn btn-leaf" id="gate-yes" type="button">Yes, come in</button><button class="btn btn-ghost" id="gate-no-btn" type="button">No</button></div>
+    <p class="gate-no" id="gate-no" hidden>Sorry, you need a patient or caregiver license to visit. You can apply with the Oklahoma Medical Marijuana Authority at oklahoma.gov/omma.</p>
+  </div>
+</div>
+
+<header class="bar">
+  <div class="wrap">
+    <a href="#top" class="sign" aria-label="How High Dispensary, back to top"><img src="img/logo.jpg" alt="How High Dispensary" width="1060" height="370"></a>
+    <nav aria-label="Main"><a href="#stores">Stores &amp; hours</a><a href="#shelves">On the shelves</a><a href="#patients">First visit</a><a href="#motto">Who we are</a></nav>
+    <a class="btn btn-leaf" href="tel:+14052172330">Call Norman</a>
+  </div>
+</header>
+
+<main id="top">
+  <section class="hero" aria-labelledby="hero-h" style="padding:0">
+    <canvas id="topo" aria-hidden="true"></canvas>
+    <div class="wrap">
+      <div class="hero-copy">
+        <span class="status" id="status"><i></i><span id="status-t">Norman &middot; 2118 W Lindsey St</span></span>
+        <h1 id="hero-h"><span class="q">How high?</span><span class="ft">1,151 ft.</span></h1>
+        <p class="lede">That&rsquo;s the ground at our Norman door on <b>West Lindsey</b>. Our Moore store sits 154 feet higher. Two dispensaries, one motto: <b>peace, love, unity and respect.</b></p>
+        <div class="cta">
+          <a class="btn btn-leaf" href="https://www.google.com/maps/dir/?api=1&amp;destination=How+High+Dispensary+2118+W+Lindsey+St+Norman+OK+73069" target="_blank" rel="noopener">Directions to Norman</a>
+          <a class="btn btn-ghost" href="#stores">Hours for both stores</a>
+        </div>
+      </div>
+      <aside class="altimeter" aria-label="Store elevations">
+        <h2>Ground elevation at the door</h2>
+        <div class="alt-row"><span>Norman &middot; W Lindsey St</span><b>1,151<small>ft</small></b></div>
+        <div class="alt-row"><span>Moore &middot; N Shields Blvd</span><b>1,305<small>ft</small></b></div>
+        <p class="alt-note">Measured from the U.S. Geological Survey elevation map at each storefront.</p>
+      </aside>
+    </div>
+  </section>
+
+  <section id="stores" aria-labelledby="stores-h">
+    <div class="wrap">
+      <div class="sec-head"><span class="label">Two stores</span><h2 id="stores-h">Stores &amp; hours</h2><p>Open seven days. Late every night but Sunday.</p></div>
+      <div class="stores">
+        <article class="store" data-store="norman">
+          <span class="store-tag">Norman</span>
+          <div class="store-top">
+            <div><h3>West Lindsey</h3><p class="addr">2118 W Lindsey St<br>Norman, OK 73069</p></div>
+            <div class="elev"><b>1,151 ft</b>elevation</div>
+          </div>
+          <table class="hours" aria-label="Norman hours">
+            <tbody>
+              <tr data-d="1"><td>Monday</td><td>10 AM &ndash; 10 PM</td></tr>
+              <tr data-d="2"><td>Tuesday</td><td>10 AM &ndash; 10 PM</td></tr>
+              <tr data-d="3"><td>Wednesday</td><td>10 AM &ndash; 10 PM</td></tr>
+              <tr data-d="4"><td>Thursday</td><td>10 AM &ndash; 10 PM</td></tr>
+              <tr data-d="5"><td>Friday</td><td>10 AM &ndash; 11 PM</td></tr>
+              <tr data-d="6"><td>Saturday</td><td>10 AM &ndash; 11 PM</td></tr>
+              <tr data-d="0"><td>Sunday</td><td>11 AM &ndash; 8 PM</td></tr>
+            </tbody>
+          </table>
+          <div class="chips"><span>Debit &amp; cash</span><span>Wheelchair-accessible entrance</span><span>Accessible parking</span></div>
+          <div class="cta">
+            <a class="btn btn-leaf" href="tel:+14052172330">(405) 217-2330</a>
+            <a class="btn btn-ghost" href="https://www.google.com/maps/dir/?api=1&amp;destination=How+High+Dispensary+2118+W+Lindsey+St+Norman+OK+73069" target="_blank" rel="noopener">Directions</a>
+          </div>
+        </article>
+        <article class="store" data-store="moore">
+          <span class="store-tag b">Moore</span>
+          <div class="store-top">
+            <div><h3>North Shields</h3><p class="addr">3537 N Shields Blvd, Suite B<br>Moore, OK 73160</p></div>
+            <div class="elev"><b>1,305 ft</b>elevation</div>
+          </div>
+          <table class="hours" aria-label="Moore hours">
+            <tbody>
+              <tr data-d="1"><td>Monday</td><td>10 AM &ndash; 11 PM</td></tr>
+              <tr data-d="2"><td>Tuesday</td><td>10 AM &ndash; 11 PM</td></tr>
+              <tr data-d="3"><td>Wednesday</td><td>10 AM &ndash; 11 PM</td></tr>
+              <tr data-d="4"><td>Thursday</td><td>10 AM &ndash; 11 PM</td></tr>
+              <tr data-d="5"><td>Friday</td><td>10 AM &ndash; 12 AM</td></tr>
+              <tr data-d="6"><td>Saturday</td><td>10 AM &ndash; 12 AM</td></tr>
+              <tr data-d="0"><td>Sunday</td><td>11 AM &ndash; 8 PM</td></tr>
+            </tbody>
+          </table>
+          <div class="chips"><span>Debit &amp; cash</span><span>Wheelchair-accessible entrance</span><span>Accessible parking</span></div>
+          <div class="cta">
+            <a class="btn btn-leaf" href="tel:+14057357677">(405) 735-7677</a>
+            <a class="btn btn-ghost" href="https://www.google.com/maps/dir/?api=1&amp;destination=How+High+Dispensary+3537+N+Shields+Blvd+Moore+OK+73160" target="_blank" rel="noopener">Directions</a>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section id="shelves" aria-labelledby="shelves-h" style="padding-top:0">
+    <div class="wrap">
+      <div class="sec-head"><span class="label">What we carry</span><h2 id="shelves-h">On the shelves</h2><p>Top-quality products for our patients, in four aisles.</p></div>
+      <div class="shelves">
+        <article class="shelf"><img src="img/flower.jpg" alt="Boxes of Moon Rock flower on a How High shelf" width="960" height="682" loading="lazy"><div class="t"><h3>Flower</h3><p>Ask for indica, sativa or hybrid, and what came in this week.</p></div></article>
+        <article class="shelf"><img src="img/edibles.jpg" alt="Wall of edible packs at How High" width="960" height="696" loading="lazy"><div class="t"><h3>Edibles</h3><p>A full wall of gummies, bars and treats.</p></div></article>
+        <article class="shelf"><div class="ph" aria-hidden="true"><span>VAPE</span></div><div class="t"><h3>Vapes</h3><p>Ask the counter what&rsquo;s in today.</p></div></article>
+        <article class="shelf"><div class="ph" aria-hidden="true"><span>CBD</span></div><div class="t"><h3>CBD</h3><p>Options without the high.</p></div></article>
+      </div>
+      <div class="stock-note"><span>Stock changes daily. Call your store to check before you drive over.</span><a class="btn btn-ghost" href="tel:+14052172330">Norman (405) 217-2330</a><a class="btn btn-ghost" href="tel:+14057357677">Moore (405) 735-7677</a></div>
+    </div>
+  </section>
+
+  <section class="motto" id="motto" aria-labelledby="motto-h">
+    <div class="wrap">
+      <h2 id="motto-h"><span>Peace.</span><span>Love.</span><span>Unity.</span><span>Respect.</span></h2>
+      <div class="motto-copy">
+        <span class="label">Who we are</span>
+        <p>Our mission at How High is to provide top-quality products that help the quality of life of our patients.</p>
+        <p>We take real pride in giving back, to our community and to charity in general. Our doors are open to everyone, and no one gets turned away for help.</p>
+        <p class="sig">We live by the motto: peace, love, unity and respect.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="patients" aria-labelledby="patients-h">
+    <div class="wrap">
+      <div class="sec-head"><span class="label">First visit</span><h2 id="patients-h">New here? Easy.</h2></div>
+      <div class="steps">
+        <div class="step"><h3>Bring your card and ID</h3><p>Your Oklahoma medical marijuana patient or caregiver license, plus a photo ID. We check both at the counter every visit.</p></div>
+        <div class="step"><h3>Tell us what you&rsquo;re after</h3><p>Name a strain, a feeling or a budget. Our budtenders will walk you through what&rsquo;s in today.</p></div>
+        <div class="step"><h3>Pay how you like</h3><p>Debit card or cash, at both stores.</p></div>
+      </div>
+      <div class="card-note">
+        <p><b style="color:var(--text)">No patient license yet?</b> Oklahoma patient licenses are issued by the Oklahoma Medical Marijuana Authority (OMMA). You apply online with a physician&rsquo;s recommendation.</p>
+        <a class="btn btn-ghost" href="https://oklahoma.gov/omma.html" target="_blank" rel="noopener">OMMA patient info</a>
+      </div>
+    </div>
+  </section>
+
+  <section aria-labelledby="faq-h" style="padding-top:0">
+    <div class="wrap split">
+      <div class="rev">
+        <div class="sec-head" style="margin-bottom:10px"><span class="label">Don&rsquo;t take our word for it</span><h2 id="faq-h">Read the reviews</h2><p>Hundreds of patients have reviewed both stores on Google.</p></div>
+        <a class="rv" href="https://maps.google.com/?cid=3233740582405810677" target="_blank" rel="noopener">Norman reviews on Google <span>Open &rarr;</span></a>
+        <a class="rv" href="https://maps.google.com/?cid=8833178603901246918" target="_blank" rel="noopener">Moore reviews on Google <span>Open &rarr;</span></a>
+      </div>
+      <div>
+        <div class="sec-head" style="margin-bottom:6px"><span class="label">Questions</span><h2>Good to know</h2></div>
+        <details><summary>What do I need to bring?</summary><p>Your Oklahoma medical marijuana patient or caregiver license and a photo ID.</p></details>
+        <details><summary>Do you take cards?</summary><p>Yes. Both stores take debit cards as well as cash.</p></details>
+        <details><summary>How late are you open?</summary><p>Norman: until 10 PM Monday to Thursday and 11 PM Friday and Saturday. Moore: until 11 PM Monday to Thursday and midnight Friday and Saturday. Sunday both stores run 11 AM to 8 PM.</p></details>
+        <details><summary>Is the store accessible?</summary><p>Yes. Both stores have a wheelchair-accessible entrance and accessible parking.</p></details>
+        <details><summary>Can I check if something is in stock?</summary><p>Call the store and ask. Norman is (405) 217-2330 and Moore is (405) 735-7677.</p></details>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="foot-top">
+      <span class="sign"><img src="img/logo.jpg" alt="How High Dispensary" width="1060" height="370" loading="lazy"></span>
+      <div class="col"><b>Norman</b><span>2118 W Lindsey St, Norman, OK 73069</span><span>(405) 217-2330</span></div>
+      <div class="col"><b>Moore</b><span>3537 N Shields Blvd, Suite B, Moore, OK 73160</span><span>(405) 735-7677</span></div>
+    </div>
+    <div class="legal">
+      <p>For use only by Oklahoma medical marijuana patients and caregivers with a valid license. Keep out of reach of children. Do not drive or operate machinery after use.</p>
+      <p>OMMA dispensary license (Moore): DAAA-OLVU-YRM9.</p>
+      <p>Independent concept prepared by Station for How High Dispensary. Hours, addresses and phone numbers as listed publicly on 29 Sep 2026; product photos are How High&rsquo;s own, from its 2020 website.</p>
+    </div>
+    <div class="foot-base"><span>&copy; 2026 How High Dispensary</span><span class="credit">Designed by <a href="https://station.solutions/" target="_blank" rel="noopener">Station.Solutions</a></span></div>
+  </div>
+</footer>
+
+<nav class="dock" aria-label="Quick actions">
+  <a href="https://www.google.com/maps/dir/?api=1&amp;destination=How+High+Dispensary+2118+W+Lindsey+St+Norman+OK+73069" target="_blank" rel="noopener">Directions</a>
+  <a href="tel:+14052172330">Call</a>
+  <a href="#stores">Hours</a>
+</nav>
+
+<script>
+(function () {
+  // Age / patient gate: remembered for this browser session only.
+  var gate = document.getElementById('gate');
+  var ok = false;
+  try { ok = sessionStorage.getItem('hh-gate') === '1'; } catch (e) {}
+  if (ok) gate.hidden = true; else document.getElementById('gate-yes').focus();
+  document.getElementById('gate-yes').addEventListener('click', function () {
+    gate.hidden = true; try { sessionStorage.setItem('hh-gate', '1'); } catch (e) {}
+  });
+  document.getElementById('gate-no-btn').addEventListener('click', function () { document.getElementById('gate-no').hidden = false; });
+
+  // Open/closed status and today's row, on Norman's clock (America/Chicago).
+  var HOURS = { norman: [[11, 20], [10, 22], [10, 22], [10, 22], [10, 22], [10, 23], [10, 23]] };
+  function chicagoNow() {
+    var p = new Intl.DateTimeFormat('en-US', { timeZone: 'America/Chicago', weekday: 'short', hour: 'numeric', minute: 'numeric', hour12: false }).formatToParts(new Date());
+    var o = {}; p.forEach(function (x) { o[x.type] = x.value; });
+    var d = ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'].indexOf(o.weekday);
+    return { d: d, h: (parseInt(o.hour, 10) % 24) + parseInt(o.minute, 10) / 60 };
+  }
+  function fmt(h) { var hh = h % 12 || 12; return hh + (h < 12 || h === 24 ? ' AM' : ' PM'); }
+  function tick() {
+    var n = chicagoNow(), today = HOURS.norman[n.d], st = document.getElementById('status'), t = document.getElementById('status-t');
+    document.querySelectorAll('.hours tr').forEach(function (r) { r.classList.toggle('today', +r.dataset.d === n.d); });
+    if (n.h >= today[0] && n.h < today[1]) { st.classList.add('open'); t.textContent = 'Norman is open now · until ' + fmt(today[1]) + ' tonight'; }
+    else {
+      st.classList.remove('open');
+      var next = n.h < today[0] ? today : HOURS.norman[(n.d + 1) % 7];
+      t.textContent = 'Norman is closed · opens ' + (n.h < today[0] ? 'today' : 'tomorrow') + ' at ' + fmt(next[0]);
+    }
+  }
+  tick(); setInterval(tick, 60000);
+
+  // Contour lines: decorative terrain drawn once (no numbers, so nothing reads as survey data).
+  var cv = document.getElementById('topo'), ctx = cv.getContext('2d');
+  function hash(x, y) { var s = Math.sin(x * 127.1 + y * 311.7) * 43758.5453; return s - Math.floor(s); }
+  function noise(x, y) {
+    var xi = Math.floor(x), yi = Math.floor(y), xf = x - xi, yf = y - yi;
+    var u = xf * xf * (3 - 2 * xf), v = yf * yf * (3 - 2 * yf);
+    var a = hash(xi, yi), b = hash(xi + 1, yi), c = hash(xi, yi + 1), d = hash(xi + 1, yi + 1);
+    return a + (b - a) * u + (c - a) * v + (a - b - c + d) * u * v;
+  }
+  function field(x, y) { return noise(x, y) * .6 + noise(x * 2.1 + 5, y * 2.1 + 9) * .3 + noise(x * 4.3 + 1, y * 4.3 + 3) * .1; }
+  function draw() {
+    var w = cv.clientWidth, h = cv.clientHeight, dpr = Math.min(window.devicePixelRatio || 1, 2);
+    if (!w || !h) return;
+    cv.width = w * dpr; cv.height = h * dpr; ctx.setTransform(dpr, 0, 0, dpr, 0, 0); ctx.clearRect(0, 0, w, h);
+    var step = 12, cols = Math.ceil(w / step) + 1, rows = Math.ceil(h / step) + 1, sc = 0.0042, g = [];
+    for (var j = 0; j < rows; j++) { g[j] = []; for (var i = 0; i < cols; i++) g[j][i] = field(i * step * sc, j * step * sc); }
+    var levels = 18;
+    for (var L = 1; L < levels; L++) {
+      var lv = 0.22 + L * 0.03, major = L % 4 === 0;
+      ctx.strokeStyle = major ? 'rgba(127,176,240,.30)' : 'rgba(127,176,240,.12)'; ctx.lineWidth = major ? 1.3 : 1;
+      ctx.beginPath();
+      for (j = 0; j < rows - 1; j++) for (i = 0; i < cols - 1; i++) {
+        var a = g[j][i], b = g[j][i + 1], c = g[j + 1][i + 1], d = g[j + 1][i];
+        var idx = (a > lv ? 8 : 0) | (b > lv ? 4 : 0) | (c > lv ? 2 : 0) | (d > lv ? 1 : 0);
+        if (idx === 0 || idx === 15) continue;
+        var x = i * step, y = j * step;
+        var T = [x + step * (lv - a) / (b - a), y], R = [x + step, y + step * (lv - b) / (c - b)],
+            B = [x + step * (lv - d) / (c - d), y + step], Lf = [x, y + step * (lv - a) / (d - a)];
+        var segs = { 1: [Lf, B], 2: [B, R], 3: [Lf, R], 4: [T, R], 5: [Lf, T, B, R], 6: [T, B], 7: [Lf, T], 8: [Lf, T], 9: [T, B], 10: [Lf, B, T, R], 11: [T, R], 12: [Lf, R], 13: [B, R], 14: [Lf, B] }[idx];
+        for (var s = 0; s < segs.length; s += 2) { ctx.moveTo(segs[s][0], segs[s][1]); ctx.lineTo(segs[s + 1][0], segs[s + 1][1]); }
+      }
+      ctx.stroke();
+    }
+  }
+  draw();
+  var rt; window.addEventListener('resize', function () { clearTimeout(rt); rt = setTimeout(draw, 150); });
+  if (document.fonts && document.fonts.ready) document.fonts.ready.then(draw);
+})();
+</script>
+</body>
+</html>
